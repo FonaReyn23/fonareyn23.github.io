@@ -212,7 +212,29 @@ switch($_POST['act']) {//В зависимости от значения act в�
 }
 
 echo $echo;//Выводим результат работы кода
-		      
+		      $.post('includes/chat.php',{
+	act: act,
+	var1: var1,
+	var2: var2
+}).done(function (data) {
+	messages__container.innerHTML = data;
+	if(data == 'Проблема авторизации') {
+		clearInterval(interval); //Если проблема авторизации, отключаем автообновление
+		if(login == null && password == null) {
+			login = prompt('Введите логин: ');//Запрашиваем логин
+			if(login != null) {
+				password = prompt('Введите пароль: ');//Запрашиваем пароль
+				send_request('auth',login,password); //Отправляем еще один запрос
+			}
+		}
+	} 
+	if(act == 'auth') {
+		interval = setInterval(update,500); //Заново запускаем автообновление
+	}
+	if(act == 'send') {
+		messageInput.value = '';
+	}
+});
 	      </script>
       </head>
       <body>

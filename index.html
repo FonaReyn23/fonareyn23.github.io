@@ -22,15 +22,19 @@
         border-left: 5px solid #33ADFF;
         display: block;
       }
-                      .chat {
-	border:1px solid #333;
-	margin:15px;
-	width:40%;
-	height:70%;
-	background:#555;
-	color:#fff;
-}
-    </style
+</style>
+	      <script type="text/javascript">
+  function send() {
+    var message = document.getElementById("message").value;
+    var name = "Гость";
+    /* Здесь блок отправки POST-запроса с данными (например, через Ajax) */
+  }
+  function update() {
+    /* Здесь отправка запроса на получение всех сообщений (например, через Ajax) */
+    /* Здесь вывод сообщений в определённом формате прямо в HTML-код с использованием DOM, либо JQuery. */
+  }
+  setInterval("update()", 1000); // Обновление окна чата каждую секунду
+</script>
       </head>
       <body>
       <ul id="navbar">
@@ -45,5 +49,30 @@
            <hr>
            <p><b>Шампунь Жумайсынба</b> – выдуманная марка шампуня, показанная в юмористическом шоу на казахстанском телевидении.<br />Необычное для русскоязычного пользователя слово стало мемом в соцсетях.</p>
            <img src="GG228.webp" width="40%" height="40%">
+			<div id="chat">
+  <table>
+    <tr>
+      <td>Имя</td>
+      <td>Сообщение</td>
+      <td>Дата</td>
+    </tr>
+    <tr>
+      <td>Имя</td>
+      <td>Сообщение</td>
+      <td>Дата</td>
+    </tr>
+  </table>
+</div>
+<p>
+  <input type="text" name="message" id="message" />
+  <input type="button" value="Отправить" onclick="send()" />
+</p>
+	      <?php
+  /* Получаем данные, полученные из JavaScript */
+  $message = $_POST["message"];
+  $name = $_POST["name"];
+  $date = date(); // Узнаём текущее время и дату
+  /* Здесь добавляем в таблицу новую запись */
+?>
       </body>
 </html>

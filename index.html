@@ -44,9 +44,68 @@ nav li {
 				border-radius: 10px;
 				color: #ffffff;
 			}
+			body.tutorial {
+  --color-text: #fff;
+  --color-bg: #171717;
+  --color-link: #ff0000;
+  background-color: var(--color-bg);
+}
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page__inner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+			.page, .page a {
+				cursor: none;
+			}
 		</style>
+		<script>
+			// задаем начальную позицию курсора за пределами экрана
+let clientX = -100;
+let clientY = -100;
+const innerCursor = document.querySelector(".cursor--small");
+
+const initCursor = () => {
+  // добавляем прослушиватель для отслеживания текущей позиции мыши
+  document.addEventListener("mousemove", e => {
+    clientX = e.clientX;
+    clientY = e.clientY;
+  });
+  
+  // преобразуем innerCursor в текущую позицию мыши
+  // используем requestAnimationFrame() для плавной работы
+  const render = () => {
+    innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+    // если вы уже используете TweenMax в проекте, то можете также
+    // использовать TweenMax.set()
+    // TweenMax.set(innerCursor, {
+    //   x: clientX,
+    //   y: clientY
+    // });
+    
+    requestAnimationFrame(render);
+  };
+  requestAnimationFrame(render);
+};
+
+initCursor()
+			</cript>
 	</head>
-	<body>
+	<body class="tutorial">
+		<main class="page">
+			<div class="page__inner">
+				<div class="cursor cursor--small"></div>
+				<canvas class="cursor cursor--canvas" resize></canvas>
+			</div>
+		</main>
 		<header>
                     <div class="container">
                     <a href="/" class="logo">LOGO</a>

@@ -58,11 +58,29 @@
 				o-background-size: cover;
 				background-size: cover;
 			}
+			img.background {
+				min-height: 100%;
+				min-width: 640px;
+				width: 100%;
+				height: auto;
+				position: fixed;
+				top: 0;
+				left: 0;
+
+  /* Зависит от размера изображения */
+				@media screen and (max-width: 640px){
+					img.bg {
+						left: 50%;
+						margin-left: -320px;
+					}
+				}
+			}
 		</style>
 		<meta charset="utf-8">
 		<link rel="icon" type="image/x-icon" href="pixil-frame-0.png">
 	</head>
 	<body>
+		<img src="dotes-in-the-circles.png" class="background" />
 		<header>
                     <div class="container">
 			    <img src="pixil-frame-0.png">

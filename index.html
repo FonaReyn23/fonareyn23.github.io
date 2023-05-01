@@ -203,18 +203,9 @@
 			/*PROGRESSBAR*/
 			@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 			* *:before, *:after {box-sizing:border-box;}
-			body {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				min-height: 100vh;
-				color: #F5F5F5;
-				font-family: sans-serif;
-				font-size: 18px;
-			}
 			.range {
 				position: relative;
-				background-color: #333;
+				background-color: #24262b;
 				width: 300px;
 				height: 30px;
 				transform: skew(30deg);
@@ -227,7 +218,7 @@
 					left: 0;
 					width: 0;
 					height: 100%;
-					background-color: #F3E600;
+					background-color: #f5f5f5;
 					z-index: 0;
 					animation: load .5s forwards linear, glitch 2s infinite linear;
 				}
@@ -319,7 +310,13 @@
 				display: grid;
 				place-items: right;
 				height: 100vh;
-				align-items:center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				color: #F5F5F5;
+				font-family: sans-serif;
+				font-size: 18px;
 			}
 		</style>
 	</head>

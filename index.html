@@ -201,6 +201,56 @@
 				height: 6vh;
 			}
 			/*PROGRESSBAR*/
+			$background: #ffffff;
+			$progress-background: rgba(0, 0, 0, 0.25);
+			$first: #353535;
+			$second: #3c6e71;
+			$third: #d9d9d9;
+			$fourth: #284b63;
+			.container {
+				margin: 100px auto;
+				width: 600px;
+				text-align: center;
+			}
+			.progress2 {
+				padding: 6px;
+				border-radius: 30px;
+				background: rgba(0, 0, 0, 0.25);
+				box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+					0 1px rgba(255, 255, 255, 0.08);
+			}
+			.progress-bar2 {
+				height: 18px;
+				border-radius: 30px;
+				background-image: linear-gradient(
+					to bottom,
+					rgba(255, 255, 255, 0.3),
+					rgba(255, 255, 255, 0.05)
+				);
+				transition: 0.4s linear;
+				transition-property: width, background-color;
+			}
+			.progress-moved .progress-bar2 {
+				width: 85%;
+				background-color: #ef476f;
+				animation: progressAnimation 6s;
+			}
+			@keyframes progressAnimation {
+				0% {
+					width: 0%;
+					background-color: #f9bcca;
+				}
+				100% {
+					width: 85%;
+					background-color: #ef476f;
+				}
+			}
+			$green: #355070;
+			$turquoise: #6d597a;
+			$blue: #b56576;
+			$light-blue: #e56b6f;
+			$purple: #eaac8b;
+			$red: #ff2d55;
 			/*OTHER*/
 			.block-border {
 				width: 400px; 
@@ -312,7 +362,12 @@
 			<div class="txt">
 				<div>
 					<h2>HTML</h2>
-					<progress min="0"max="100" value="50"></progress>
+					<div class="container">
+						<div class="progress2 progress-moved">
+							<div class="progress-bar2">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

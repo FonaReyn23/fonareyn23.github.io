@@ -1,5 +1,6 @@
 <html>
 	<head>
+	    <meta charset="UTF 8">
 		<title>Portfolio</title>
 		<script>
 			alert("Этот сайт находиться в разработке");
@@ -69,13 +70,6 @@
 			}
 			/*MENU*/
 			@import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,700&display=swap');
-			.body-text {
-				padding-top: 20vh;
-				text-align: center;
-				position: relative;
-				font-family: cursive;
-				color: #f2f3f5;
-			}
 			.hamburger-icon {
 				position: absolute;
 				z-index: 1;
@@ -155,7 +149,7 @@
 				color: #FFAB91;
 			}
 			.menu-links li:first-child:hover a {
-				color: black;  
+				color: black;
 				background-color: #FFAB91;
 			}
 			#QC-info {
@@ -221,10 +215,53 @@
 			font-weight: 300;
 			color: rgba(255, 255, 255, 0.75);
 			}
+			/*PROGRESS_DREAM*/
+			.cont {
+			margin: 100px auto;
+			width: 600px;
+			text-align: center;
+			}
+			.progress {
+			padding: 6px;
+			background: $progress-background;
+			border-radius: 6px;
+			box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+			0 1px rgba(255, 255, 255, 0.08);
+			}
+			.progress-bar {
+			height: 18px;
+			background-color: #f5f5f5;
+			border-radius: 4px;
+			transition: 0.4s linear;
+			transition-property: width, background-color;
+			}
+			.progress-striped .progress-bar {
+			background-color: $second;
+			width: 1%;
+			background-image: linear-gradient(
+			45deg,
+			$first 25%,
+			transparent 25%,
+			transparent 50%,
+			$first 50%,
+			$first 75%,
+			transparent 75%,
+			transparent
+			);
+			animation: progressAnimationStrike 6s;
+			}
+			@keyframes progressAnimationStrike {
+			from {
+			width: 0;
+			}
+			to {
+			width: 1%;
+			}
+			}
 			/*OTHER*/
 			.block-border {
-				width: 400px; 
-				height: 50px; 
+				width: 400px;
+				height: 50px;
 				background-color:#24262b;
 				border-radius: 15px;
 				display: inline-block;
@@ -253,42 +290,62 @@
 			.txt {
 				color:#f2f3f5;
 				font-family:cursive;
-				box-sizing: border-box;
-				font-size: 20px;
+				box-sizing:border-box;
+				font-size:20px;
 			}
 			.txt p {
 				color: #bababa;
-				font-size: 15px;
+				font-size:15px;
 			}
 			.h24 {
 				color:#f2f3f5;
 			}
 			.ceter {
 				background-color:#24262b;
-				border-radius: 15px;
-				display: inline-block;
-				color: #f2f3f5;
-				width: 300px; 
-				height: 100px; 
-				line-height: 0.5;
-				text-align: left;
+				border-radius:15px;
+				display:inline-block;
+				color:#f2f3f5;
+				width:300px;
+				height:100px;
+				line-height:0.5;
+				text-align:left;
 			}
 			.center {
-			border-radius: 15px;
-			background-color: #24262b;
-			width: 600px;
-			height: 165px;
+			border-radius:15px;
+			background-color:#24262b;
+			width:600px;
+			height:165px;
 			}
-			.cetner {
-			border-radius: 15px;
-			background-color: #24262b;
-			width: 600px;
-			height: 165px;
+			.Portfolio {
+			border-radius:10px;
+			background-color:#131313;
+			width:100%;
+			height:600px;
+			}
+			/*Border*/
+			.brtop{
+			border-radius:5px;
+			background-color:#24262b;
+			width:200px;
+			height:400px;
+			}
+			.brtop2{
+			border-radius:5px;
+			background-color:#24262b;
+			width:600px;
+			height:200px;
 			}
 			/*BODY*/
 			body {
-				background-color: #0f1012;
-				font-family: Libre Caslon Text;
+				background-color:#0f1012;
+				font-family:Libre Caslon Text;
+			}
+			.body-text {
+				padding-top:20vh;
+				text-align:center;
+				position:relative;
+				font-family:cursive;
+				color:#f2f3f5;
 			}
 		</style>
 	</head>
@@ -301,7 +358,7 @@
 					<span></span>
 					<span></span>
 					<span></span>
-				</label>    
+				</label>
 			</div>
 			<div class="menu-pane">
 				<nav>
@@ -311,48 +368,50 @@
 						<li><a href="https://discord.gg/w3n7C9tZkE">Поддержка</a>
 						</li>
 						<li><a href="https://vk.com/timur_ryazanov">VK</a></li>
-						<li><a href="https://www.donationalerts.com/r/buron_ss">Донат</a></li>
+						<li><a href="https://www.donationalerts.com/r/fonareyn">Донат</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
-		<div class="body-text">
-			<h1>Портфолио</h1>
-			<p>Сделано с любовью(и CSS)</p>
+	    <div class="Portfolio">
+		    <div class="body-text">
+		    	<h1 style="margin:80px 0 0 -750px;">Портфолио</h1>
+		    	<p style="margin:0 0 0 -720px;">Сделано с любовью(и CSS)</p>
+	    	</div>
 		</div>
 		<hr/ width="90%">
-		<div class="gray_bg">
+		<div class="gray_bg" style="width:100%; height:450px;">
 			<div class="txt_about">
-				<h1 style="font-family:cursive;">Немного о себе</h1>
+				<h1 style="font-family:cursive; margin:0 0 0 0;">Немного о себе</h1>
 			</div>
 			<hr/ width="65%">
 			<div class="txt">
-				<div class="ceter">
+				<div class="ceter" style="margin: 80px 0 0 330px;">
 					<h4 style="margin: 23px 0 20px 5px;">Имя</h4>
 					<p style="margin: 28px 0 20px 5px;">Тимур</p>
 				</div>
-				<div class="ceter">
+				<div class="ceter" style="margin: 80px 0 0 5px;">
 					<h4 style="margin: 23px 0 20px 5px;">Почта</h4>
 					<p style="margin: 28px 0 20px 5px;">zazuzagg@gmail.com</p>
 				</div>
-				<div class="ceter">
+				<div class="ceter" style="margin: 10px 0 0 400px;">
 					<h4 style="margin: 23px 0 20px 5px;">Я живу</h4>
 					<p style="margin: 28px 0 20px 5px;">В Казани</p>
 				</div>
-				<div class="ceter">
+				<div class="ceter" style="margin: 10px 0 0 5px;">
 					<h4 style="margin: 23px 0 20px 5px;">Сейчас мне</h4>
 					<p style="margin: 28px 0 20px 5px;">14 лет</p>
 				</div>
 			</div>
 		</div>
 		<hr/ width="90%">
-		<div class="gray_bg">
+		<div class="gray_bg" style="width:100%; height:700px;">
 			<div class="txt_about">
 				<h1 style="font-family:cursive;">Мои навыки</h1>
 			</div>
 			<hr/ width="65%">
 			<div class="txt">
-			        <div class="center">
+			        <div class="center" style="margin: 0 0 0 50px;">
 			            <h3 style="margin: 0 0 10px 10px;">HTML/CSS/JavaScript</h3>
 				     	<p style="margin: -10px 0 0 10px;">Начал изучать FronEnd так как не смог справиться с <br>BackEnd.</p>
 						<div style="margin: -67px 0 0 400px;">
@@ -364,7 +423,7 @@
 						</div>
 					</div>
 					<br>
-					<div class="cetner">
+					<div class="center"style="margin: 10px 0 0 350px;">
 			            <h3 style="margin: 0 0 10px 10px;">C#</h3>
 				     	<p style="margin: -10px 0 0 10px;">Честно говоря незнаю зачем вам эта информация,но<br>когда-то хотел научиться делать игры,а<br>потом просто забросил.</p>
 						<div style="margin: -87 0 0 400px;">
@@ -372,6 +431,30 @@
 					            <div class="circle per-25">
 									<div class="inner">25%</div>
 								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="center"  style="margin: 10px 0 0 700px;">
+			            <h3 style="margin: 0 0 10px 10px;">Пк</h3>
+				     	<p style="margin: -10px 0 0 10px;">Умею собирать топовые пеки<br>Как собрать пк?<br>молча...</p>
+						<img src="imagine/PC.png" width="150px" height="150px" style="margin: -88px 0 0 400px">
+					</div>
+			</div>
+		</div>
+		<hr/ width="90%">
+		<div class="gray_bg" style="height:320px;">
+			<div class="txt_about">
+				<h1 style="font-family:cursive;">Немного помечтаем</h1>
+			</div>
+			<hr/ width="65%">
+			<div class="txt">
+			        <div class="center">
+			            <h3 style="margin: 0 0 10px 10px;">VR</h3>
+				     	<p style="margin: -10px 0 0 10px;">Сейчас коплю на VR.Возможно когда у меня появится<br>начну делать под него простенькие игры</p>
+						<div class="cont">
+						    <div class="progress progress-striped">
+                                <div class="progress-bar"></div>
 							</div>
 						</div>
 					</div>
@@ -390,9 +473,8 @@
 						<div class="footer-col">
 							<h4>Полезная информация</h4>
 							<ul>
+						    	<li><a href="https://www.donationalerts.com/r/fonareyn">Поддежать меня</a></li>
 								<li><a href="https://taplink.cc/buron">Контакты</a></li>
-								<li><a href="#">Другие сервисы</a></li>
-								<li><a href="#">affiliate program</a></li>
 							</ul>
 						</div>
 					</div>

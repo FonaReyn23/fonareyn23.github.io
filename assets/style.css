@@ -1,0 +1,90 @@
+body{
+	background: #fff;
+	overflow-x:hidden;
+}
+/**/
+.dark-white::-moz-selection{
+    color: #fff;
+    background-color: #333;
+    }
+.dark-white::selection{
+    color: #fff;
+    background-color: #333;
+    }
+.white-dark::-moz-selection{
+    color: #333;
+    background-color: #fff;
+    }
+.white-dark::selection{
+    color: #333;
+    background-color: #fff;
+    }
+/*First block*/
+.Hello {
+	font-size: 45px;
+	font-family: Impact, sans-serif;
+}
+main {
+	margin: 1rem;
+}
+main p {
+	color: #1a1a1a;
+}
+.car-img{
+	text-align: center;
+}
+.line-hello{
+	width: 50%;
+	color: #333;
+}
+/*Second block*/
+.info {
+	background-color: #1a1a1a;
+    height: calc(255vh - 4rem);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+	margin: auto -20px -20px;
+	border-radius: 5px 5px;
+}
+/*Third block*/
+.line {
+	width: 50%;
+	background-color: #f5f5f5;
+	color: #f5f5f5;
+}
+.about-me{
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	margin: 120px auto;
+	position: absolute;
+}
+/*Fourth Block*/
+.img-adv{
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	margin: 550px auto;
+}
+.img-my-adv{
+	width: 400px;
+	height: 330px;
+}
+.img-my-adv1{
+	width: 400px;
+	height: 520px;
+}
+/*Footer*/
+footer {
+	text-align: center;
+	background-color: #1a1a1a;
+	color: #fff;
+	padding: 1rem;
+	margin: -10px -10px;
+}
+p {
+	font-size: 1.25rem;
+	line-height: 1.5;
+}
+/*Cursor*/

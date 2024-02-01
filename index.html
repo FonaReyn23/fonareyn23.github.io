@@ -2,18 +2,24 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/header.css">
+		<link rel="stylesheet" href="assets/footer.css">
 		<title>My portfolio</title>
-		<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script> 
+		<style>
+			
+		</style>
 	</head>
 	<body>
-		<header>
-			<link rel="stylesheet" href="assets/header.css">
+		<script>
+			
+		</script>
+		<header id="header">
 			<div class="h1">
-				<h1><a href="" class="white-dark">FonaReyn</a></h1>
+				<h1><a href="" class="white-dark" onclick="alert('Что же сюда добавить? Если знаешь пиши на zazuzagg@gmail.com')">FonaReyn</a></h1>
 			</div>
 			<div class="top-txt">
 				<ul>
-					<li><a href="https://tapy.me/xgix85" class="white-dark contact">Контакты</a></li>
+					<li><a href="https://tapy.me/xgix85" class="white-dark, contact">Контакты</a></li>
 				</ul>
 			</div>
 		</header>
@@ -22,34 +28,40 @@
 				<h1 class="dark-white" align="center">Хэллоу</h1>
 				<h3 class="dark-white" align="center" style="font-size: 17px;">Будь как дома, путник.</h3>
 				<hr class="line-hello">
-				<p class="car-img">
+				<p class="car-img" style="text-align: center;">
 					<img src="images/car.png" width="255px" height="125px"/>
 				</p>
 			</div>
-			<div class="info">
-				<div class="about-me">
-					<h2 class="white-dark">Обо мне</h2>
-					<hr class="line">
-					<h3 class="white-dark">Я обычный 15-летний хиккан)<br>Я люблю рисовать, иногда не сплю до 12. 
-						<br>Также я люблю гулять.Учусь играть на гитаре. 
-						<br>Еще я люблю слушать музыку (жить без нее не могу :3)
-						<br>В свободное время фотографирую
-						<br>(ниже можете посмотреть мои фото)
-					</h3>
+			<div class="frame">
+				<div class="div">
+				  <div class="div-wrapper"><div class="text-wrapper">Биография</div></div>
+				  <div class="overlap-group">
+					<div class="div-2"></div>
+					<div class="div-3"></div>
+					<div class="front-end-wrapper">
+					  <p class="front-end">
+						Зовут меня Рязанов Тимур. Живу в России. <br />Самоучка в области front-end разработки.<br />Умею не плохо
+						рисовать.
+					  </p>
+					</div>
+					<div class="div-wrapper-2"><div class="text-wrapper-2">Мои работы</div></div>
+					<div class="div-4">
+					  <img src="images/naPCVLJrmNk.jpg" style="height: 305px; width: 230px; top: 10px; left: 10px; border-radius: 5px; position: absolute;">
+					  <img src="images/ePardO1orTM.jpg"  style="height: 432px; width: 313px; top: 10px; left: 255px; border-radius: 5px; position: absolute;">
+					  <img src="images/BLSC0HMQbxw.jpg"  style="height: 249px; width: 313px; top: 455px; left: 255px; border-radius: 5px; position: absolute;">
+					  <img src="images/3QqD2xBkqlc.jpg"  style="height: 379px; width: 230px; top: 325px; left: 10px; border-radius: 5px; position: absolute;">
+					</div>
+				  </div>
 				</div>
-				<div class="img-adv">
-					<h2 class="white-dark" style="color: #fff;">Сделал Я!</h2>
-					<hr class="line">
-					<img src="images/3QqD2xBkqlc.jpg" style="position:absolute;top:610px;right:auto;" class="img-my-adv">
-					<img src="images/BLSC0HMQbxw.jpg" style="position:absolute;top:610px;left:15px;" class="img-my-adv">
-					<img src="images/ePardO1orTM.jpg" style="position:absolute;right:auto;" class="img-my-adv1">
-					<img src="images/naPCVLJrmNk.jpg" style="position:absolute;left:15px;" class="img-my-adv1">
-				</div>
-			</div>
+			  </div>
 		</main>
-		<footer>
-			<p class="white-dark">&copy; 2023 Все права защищены.</p>
-		</footer>
+		<div id="footer">
+			<div class="div-ok">
+				<div class="text-footer"><a href="#" onclick="alert('Крч я не ебу как организовать копирование потому что полный 0 в JavaScript :( ')">zazuzagg@gmail.com</a><div>
+				<div class="text-footer-2">копировать</div>
+				<div class="text-footer-3">Подвал</div>
+			</div>
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>

@@ -1,12 +1,17 @@
 /*Top line*/
 header {
+	margin-top: 10px;
+	position: fixed;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: #1a1a1a;
 	color: #fff;
-	margin: -10px -10px;
 	font-family: Arial Black, sans-serif;
+	border-radius: 10px;
+	height: 50px;
+	min-width: 98%;
+	top: 0;
 }
 .h1 h1 a{
 	color: #fff;

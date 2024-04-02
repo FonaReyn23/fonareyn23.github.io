@@ -14,6 +14,46 @@ body {
   -moz-animation-delay: 1s;
   animation-delay: 1s;
 }
+#hello h1::-moz-selection{
+    color: #fff;
+    background-color: #333;
+}
+#hello h1::selection{
+    color: #fff;
+    background-color: #333;
+}
+text::-moz-selection{
+    color: #333;
+    background-color: #fff;
+}
+text::selection{
+    color: #333;
+    background-color: #fff;
+}
+p::-moz-selection{
+    color: #333;
+    background-color: #fff;
+}
+p::selection{
+    color: #333;
+    background-color: #fff;
+}
+.about_txt h1::-moz-selection{
+    color: #333;
+    background-color: #fff;
+}
+.about_txt h1::selection{
+    color: #333;
+    background-color: #fff;
+}
+footer h1::-moz-selection{
+    color: #333;
+    background-color: #fff;
+}
+footer h1::selection{
+    color: #333;
+    background-color: #fff;
+}
 
 /*Header*/
 

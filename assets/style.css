@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
+
+body {
+    background-color: #1a1a1a;
+}
+.animated {
+  -webkit-animation-duration: .6s;
+  -o-animation-duration: .6s;
+  -moz-animation-duration: .6s;
+  animation-duration: .6s;
+
+  -webkit-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#hello h1::-moz-selection{
+    color: #fff;
+    background-color: #333;
+}
+#hello h1::selection{
+    color: #fff;
+    background-color: #333;
+}
+text::-moz-selection{
+    color: #333;
+    background-color: #fff;
+}
+text::selection{
+    color: #333;
+    background-color: #fff;
+}
+p::-moz-selection{
+    color: #333;
+    background-color: #fff;
+}
+p::selection{
+    color: #333;
+    background-color: #fff;
+}
+.about_txt h1::-moz-selection{
+    color: #333;
+    background-color: #fff;
+}
+.about_txt h1::selection{
+    color: #333;
+    background-color: #fff;
+}
+footer h1::-moz-selection{
+    color: #333;
+    background-color: #fff;
+}
+footer h1::selection{
+    color: #333;
+    background-color: #fff;
+}
+
+/*Header*/
+
+header {
+    display: flex;
+    background-color: #212121;
+    color: #f1f1f1;
+    justify-content: space-between;
+    border-radius: 15px;
+    font-family: Courier New, monospace;
+}
+header ul {
+    margin-top: 17px;
+    list-style: none;
+    display: flex;
+}
+
+header a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #f5f5f5;
+    display: flex;
+    transition: .5s;
+}
+header a:hover {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    transform: scale(1.1);
+}
+
+/*Hello*/
+
+#hello {
+    position: relative;
+    font-family: 'Comfortaa', cursive;
+    border-radius: 15px;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://i.pinimg.com/originals/40/ec/f5/40ecf5767feaa7f574adc2bcd0f2b5aa.jpg);
+}
+
+/*About*/
+
+#about {
+    font-family: Courier New, monospace;
+    position: relative;
+    margin-top: 15px;
+    height: 100vh;
+    border-radius: 15px;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://flomaster.top/o/uploads/posts/2024-02/1708934783_flomaster-top-p-temnie-oboi-minimalizm-pinterest-risunok-31.jpg);
+}
+.about_txt {
+    color: #f5f5f5;
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+}
+.about_txt h1 {
+    padding-top: 250px;
+    margin: 0;
+}
+
+/*Skills*/
+
+#txt {
+    border-radius: 15px;
+    position: relative;
+    margin-top: 15px;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://flomaster.top/o/uploads/posts/2024-02/1708934834_flomaster-top-p-temnie-oboi-minimalizm-pinterest-risunok-1.jpg);
+}
+#txt p {
+    color: #404040;
+    padding-left: 30vh;
+    padding-top: 50vh;
+}
+
+/*Photos*/
+
+#photos {
+    font-family: Courier;
+    border-radius: 15px;
+    position: relative;
+    margin-top: 15px;
+    height: 100vh;
+}
+.phts_a {
+    padding-top: 40vh;
+    display: block;
+    text-align:center;
+}
+
+/*Footer*/
+
+footer {
+    font-family: MS Gothic;
+    display: block;
+    text-align: center;
+    color: #f5f5f5;
+    border-radius: 15px;
+    position: relative;
+    margin-top: 15px;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://flomaster.top/o/uploads/posts/2024-02/1708925358_flomaster-top-p-chernie-oboi-minimalizm-krasivo-narisovann-52.jpg);
+}
+footer a {
+    font-size: 15px;
+    text-decoration: none;
+    justify-content: space-between;
+    color: #f5f5f5;
+    display: block;
+    margin-left: 8px;
+    text-align: center;
+}
+footer nav ul li {
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    margin-left: -10px;
+}
+footer ul {
+    list-style: none;
+}
+footer a {
+    transition: .5s;
+}
+footer a:hover {
+    transform: scale(1.3);
+}

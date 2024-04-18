@@ -152,10 +152,9 @@ header a:hover {
     margin-top: 15px;
     height: 100vh;
 }
-.phts_a {
-    padding-top: 40vh;
-    display: block;
-    text-align:center;
+.phts_img img{
+    margin: 3px;
+    border-radius: 15px;
 }
 
 /*Footer*/

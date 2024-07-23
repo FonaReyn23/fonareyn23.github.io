@@ -142,6 +142,7 @@ header a:hover {
     position: relative;
     margin-top: 15px;
     height: 100vh;
+    text-align: left;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -149,9 +150,13 @@ header a:hover {
 }
 #txt p {
     color: #404040;
-    padding-left: 30vh;
+    padding-left: 10vh;
     padding-top: 50vh;
 }
+.txt_txt {
+  max-width: 35%;
+}
+
 
 /*Photos*/
 

@@ -142,19 +142,10 @@ header a:hover {
     position: relative;
     margin-top: 15px;
     height: 100vh;
-    text-align: left;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(https://flomaster.top/o/uploads/posts/2024-02/1708934834_flomaster-top-p-temnie-oboi-minimalizm-pinterest-risunok-1.jpg);
-}
-#txt p {
-    color: #404040;
-    padding-left: 80px;
-    padding-top: 50vh;
-}
-.txt_txt {
-  max-width: 35%;
 }
 
 

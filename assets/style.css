@@ -159,11 +159,18 @@ header a:hover {
     height: 100vh;
 }
 .phts_img {
-    width: 100%;
+    text-align: center;
 }
-.phts_img img{
-    margin: 2px;
-    border-radius: 15px;
+#photos img {
+    width: 30%;
+}
+#photos img:nth-child(1) {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+#photos img:nth-child(3) {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 /*Footer*/

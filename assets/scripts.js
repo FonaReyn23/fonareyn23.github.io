@@ -1,1 +1,1 @@
-console.warn('Привет!')
+console.warn('Привет!)')

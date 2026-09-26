@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="assets/css/firstBlock.css">
+        <link rel="stylesheet" href="assets/css/secondBlock.css">
+        <link rel="stylesheet" href="assets/css/thirdBlock.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="icon" href="img/logo.png" type="image/png">
+        <script src="assets/scripts.js"></script>
+        <style>
+            #About {
+                margin-top: 25px;
+                width: 100%;
+                height: 97vh;
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* Две колонки: текст слева, карусель справа */
+                align-items: center;
+                padding: 0 60px;
+                border-radius: 35px;
+                font-family: "Comfortaa", regular;
+                background-color: #222222;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                overflow: hidden;
+                position: relative;
+            }
+            .aboutTxt {
+                position: relative;
+                left: 0;
+                color: #f5f5f5;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                border-radius: 22px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                max-width: 400px;
+                padding: 40px 20px;
+                background-color: rgba(255, 255, 255, 0.02);
+            }
+            .line1 {
+                width: 60%;
+                height: 2px;
+                background-color: #f5f5f5;
+                border-radius: 15px;
+                margin: 15px auto;
+            }
+
+            /* --- СТИЛИ ДЛЯ ВЕРТИКАЛЬНОЙ КАРУСЕЛИ ФОТО --- */
+            .carousel-container {
+                height: 80vh;
+                display: flex;
+                gap: 20px;
+                overflow: hidden;
+                position: relative;
+                justify-content: flex-end;
+                /* Маска для плавного исчезания фото сверху и снизу */
+                mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+                -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+            }
+
+            .carousel-track {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                animation: scrollUp 15s linear infinite;
+            }
+
+            .carousel-track.reverse {
+                animation: scrollUp 20s linear infinite reverse;
+            }
+
+            .carousel-card {
+                width: 180px;
+                height: 240px;
+                object-fit: cover;
+                border-radius: 24px;
+                background-color: #333;
+                flex-shrink: 0;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            @keyframes scrollUp {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-50%); }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header" id="mainHeader">
+            <nav>
+                <ul>
+                    <li><a href="Портфолио">Портфолио</a></li>
+                    <li><a href="Контакты" style="margin-left: 20px;">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--1 блок-->
+        <section class="hello">
+            <h1 style="padding-top: 150px; font-size: 60px; margin: 0px; margin-bottom: 0;">Привет!</h1>
+            <div class="helloCont">
+                <span class="line"></span>
+                <p class="helloSubtitle">торт - это ложь</p>
+                <span class="line"></span>
+            </div>
+            <div><a href="" class="buttonHel">Смотреть портфолио</a></div>
+            <div class="btnCont">
+                <a href="#About" class="btnDown" style="color: #212121;">↓</a>
+                <a href="#About" class="btnDownText">Дальше</a>
+            </div>
+        </section>
+        <!--2 блок-->
+        <section id="About">
+            <div class="aboutTxt">
+                <h1 style="font-size: 40px; font-family: Comfortaa, bold; margin: 0;">Обо мне</h1>
+                <span class="line1"></span>
+                <p style="line-height: 1.6; font-size: 14px; color: #cccccc;">Зовут меня Тимур.
+                <br>Живу в России.
+                <br>Занимаюсь Front-End разработкой.
+                <br>Также увлекаюсь фотографией, дизайном и играми.</p>
+            </div>
+
+            <!-- Лента / Карусель фотографий -->
+            <div class="carousel-container">
+                <!-- Первая дорожка (ползет вверх) -->
+                <div class="carousel-track">
+                    <img src="https://picsum.photos/300/400?random=1" class="carousel-card" alt="photo">
+                    <img src="https://picsum.photos/300/400?random=2" class="carousel-card" alt="photo">
+                    <img src="https://picsum.photos/300/400?random=3" class="carousel-card" alt="photo">
+                    <!-- Дубликаты для бесшовности -->
+                    <img src="https://picsum.photos/300/400?random=1" class="carousel-card" alt="photo">
+                    <img src="https://picsum.photos/300/400?random=2" class="carousel-card" alt="photo">
+                </div>
+                <!-- Вторая дорожка (ползет вниз / в обратную сторону с другой скоростью) -->
+                <div class="carousel-track reverse">
+                    <img src="https://picsum.photos/300/400?random=4" class="carousel-card" alt="photo">
+                    <img src="https://picsum.photos/300/400?random=5" class="carousel-card" alt="photo">
+                    <img src="https://picsum.photos/300/400?random=6" class="carousel-card" alt="photo">
+                    <!-- Дубликаты для бесшовности -->
+                    <img src="https://picsum.photos/300/400?random=4" class="carousel-card" alt="photo">
+                    <img src="https://picsum.photos/300/400?random=5" class="carousel-card" alt="photo">
+                </div>
+            </div>
+        </section>
+        <!--3 блок-->
+        <section id="Prices" class="blockPrice">
+            <h1 style="font-size: 40px;">Услуги</h1>
+            <span class="line2"></span>
+            <div class="servicesGrid">
+                <div class="price1">
+                <h3>Адаптация и доработка макетов</h3>
+                <p style="color: #888888;">HTML5 / CSS3
+                <br>Flexbox / Grid</p>
+                <div class="btnPrice">
+                    <p>800 ₽</p>
+                </div>
+            </div>
+            <div class="price1">
+                <h3>Верстка сайтов-визиток и лендингов</h3>
+                <p style="color: #888888;">Responsive Design</p>
+                <div class="btnPrice">
+                    <p>700 ₽</p>
+                </div>
+            </div>
+            <div class="price1">
+                <h3>Дизайн Figma</h3>
+                <p style="color: #888888;">Figma / UI/UX</p>
+                <div class="btnPrice">
+                    <p>800 ₽</p>
+                </div>
+            </div>
+            </div>
+            <div></div>
+        </section>
+        <!--Конец-->
+        <section class="footer">
+            <div>
+                <h1 style="font-size: 50px; margin-top: 30vh; margin-bottom: 0;">~ Подвал ~</h1>
+                <p>Пока что здесь нет ничего интересного</p>
+                <nav>
+                    <ul style="padding: 0;">
+                        <li><a href="https://github.com/FonaReyn23"><img src="img/icons/twitch_macos_bigsur_icon_189608.png" width="58px" height="58px"></a></li>
+                        <li><a href="https://t.me/Alkina341"><img src="img/icons/telegram_macos_bigsur_icon_189662.png" width="58px" height="58px"></a></li>
+                        <li><a href="https://discord.gg/Rj8Ya4Axb"><img src="img/icons/discord_macos_bigsur_icon_190238.png" width="58px" height="58px"></a></li>
+                        <li><a href="https://steamcommunity.com/profiles/76561199162294815/"><img src="img/icons/discord_macos_bigsur_icon_190238.png" width="58px" height="58px"></a></li>
+                        <li><a href="https://www.instagramm.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=styukyq"><img src="img/icons/discord_macos_bigsur_icon_190238.png" width="58px" height="58px"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </body>
+</html>

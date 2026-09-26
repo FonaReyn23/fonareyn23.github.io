@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #1a1a1a;
+    padding: 5px 15px;
+
+}
+/*.header.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}*/
+.header {
+    display: flex;
+    width: 100%;
+    background-color: #212121;
+    justify-content: space-between;
+    border-radius: 15px;
+    font-family: "Comfortaa", regular;
+}
+.header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.header a {
+    text-decoration: none;
+    color: #f5f5f5;
+    display: inline-block;
+    font-size: 15px;
+    transition: .5s;
+}
+.header a:hover{
+    transform: scale(1.1);
+
+}
+
+/*Блок с приветствием*/
+
+.hello {
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    height: 88vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://i.pinimg.com/originals/40/ec/f5/40ecf5767feaa7f574adc2bcd0f2b5aa.jpg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 35px;
+    font-family: 'Comfortaa', regular;
+}
+.hello a {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+.buttonHel {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #37628E;
+    padding: 14px 18px;
+    border-radius: 20px;
+    box-shadow: 0 5px 0 #1A2F45;
+    transition: .3s;
+}
+.buttonHel:hover {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 ;
+}
+.helloCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.line {
+    flex: 1;
+    height: 3px;
+    background-color: #616161;
+    border-radius: 15px;
+}
+.helloSubtitle {
+    padding: 0 15px;
+    color: #616161;
+    white-space: nowrap;
+}
+
+/*Кнопка прокрутки со стрелками*/
+.btnContUp {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+.btnCont {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+.btnDown, .btnUp {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    z-index: 10;
+    transition: .5s;
+}
+.btnDown:hover {
+    background-color: #B4B4B4;
+    transform: scale(1.1);
+}
+.btnDownText {
+    color: #f5f5f5;
+    transition: .5s;
+}
+.btnDownText:hover {
+    color: #83a3b7;
+}

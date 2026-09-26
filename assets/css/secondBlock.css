@@ -1,0 +1,71 @@
+#About {
+    margin-top: 25px;
+    width: 100%;
+    height: 97vh;
+    display: flex;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    border-radius: 35px;
+    font-family: "Comfortaa", regular;
+    background-color: #222222;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+.aboutTxt {
+    position: relative;
+    left: auto;
+    color: #f5f5f5;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 22px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    flex-shrink: 0;
+}
+.line1 {
+    width: 60%;
+    height: 2px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+}
+.carouselCont {
+    height: 90vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: flex-end;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+.carouselTrack {
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 15s linear infinite;
+    padding-right: 20px;
+}
+.carouselTrack.Rev {
+    animation: scrollUp 20s linear infinite reverse;
+}
+.carouselCard {
+    width: 180px;
+    height: 250px;
+    border-radius: 24px;
+    flex-shrink: 0;
+    margin-top: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}

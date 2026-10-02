@@ -8,9 +8,51 @@
         <link rel="stylesheet" href="assets/css/thirdBlock.css">
         <link rel="stylesheet" href="assets/css/footer.css">
         <link rel="icon" href="img/logo.png" type="image/png">
-        <script src="assets/scripts.js"></script>
+        <script src="assets/scripts.js" defer></script>
+        <style>
+            #followBlock {
+                width: 15px;
+                height: 15px;
+                position: fixed;
+                z-index: 9999;
+                border-radius: 50%;
+                background-color: #f5f5f5;
+                border: solid 2px #f5f5f5;
+                margin-top: -23px;
+                margin-left: -33px;
+                pointer-events: none;
+                transition: 0.1s;
+            }
+            #followBlock1 {
+                width: 25px;
+                height: 25px;
+                position: fixed;
+                z-index: 9999;
+                border-radius: 50%;
+                border: solid 2px #f5f5f5;
+                margin-top: -28px;
+                margin-left: -38px;
+                pointer-events: none;
+                transition: 0.15s;
+            }
+            #followBlock.hovered {
+                background-color: rgba(255, 255, 255, 1);
+                width: 100px;
+                height: 100px;
+                margin-top: -67px;
+                margin-left: -73px;
+                mix-blend-mode: difference;
+            }
+            #followBlock1.hovered1 {
+                border: 0;
+                width: 0;
+                height: 0;
+            }
+        </style>
     </head>
     <body>
+        <div id="followBlock"></div>
+        <div id="followBlock1"></div>
         <header class="header" id="mainHeader">
             <nav>
                 <ul>
@@ -38,7 +80,7 @@
             <!--div class="btnContUp">
                 <a href="#About" class="btnDown" style="color: #212121;">↓</a>
             </div-->
-            <div class="aboutTxt">
+            <div class="aboutTxt" id="aboutTxt">
                 <h1 style="font-size: 40px; font-family: Comfortaa, bold;">Обо мне</h1>
                 <span class="line1"></span>
                 <p>Зовут меня Тимур.
@@ -58,11 +100,11 @@
                 <!-- Вторая дорожка (ползет вниз / в обратную сторону с другой скоростью) -->
                 <div class="carouselTrack Rev">
                     <img src="img/photos/bomz.jpg" class="carouselCard">
-                    <img src="img/photos/_DSC1595.png" class="carouselCard">
+                    <img src="img/photos/_DSC1595.jpg" class="carouselCard">
                     <img src="img/photos/vetka.jpg" class="carouselCard">
                     <!-- Дубликаты для бесшовности -->
                     <img src="img/photos/bomz.jpg" class="carouselCard">
-                    <img src="img/photos/_DSC1595.png" class="carouselCard">
+                    <img src="img/photos/_DSC1595.jpg" class="carouselCard">
                 </div>
             </div>
             <!--<div class="btnCont">

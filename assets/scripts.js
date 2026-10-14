@@ -9,9 +9,9 @@ window.addEventListener("scroll", () => {
 });  */
 
 
-var follower = document.getElementById("followBlock");
-var follower1 = document.getElementById("followBlock1");
-var aboutTxtBlock = document.getElementById("aboutTxt");
+const follower = document.getElementById("followBlock");
+const follower1 = document.getElementById("followBlock1");
+const aboutTxtBlock = document.getElementById("aboutTxt");
 
 window.addEventListener("mousemove", function(event){
     var cx = event.clientX;

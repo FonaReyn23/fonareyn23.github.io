@@ -18,8 +18,8 @@
                 border-radius: 50%;
                 background-color: #f5f5f5;
                 border: solid 2px #f5f5f5;
-                margin-top: -23px;
-                margin-left: -33px;
+                margin-top: -80px;
+                margin-left: -10px;
                 pointer-events: none;
                 transition: 0.1s;
             }
@@ -30,8 +30,8 @@
                 z-index: 9999;
                 border-radius: 50%;
                 border: solid 2px #f5f5f5;
-                margin-top: -28px;
-                margin-left: -38px;
+                margin-top: -85px;
+                margin-left: -15px;
                 pointer-events: none;
                 transition: 0.15s;
             }
@@ -39,8 +39,8 @@
                 background-color: rgba(255, 255, 255, 1);
                 width: 100px;
                 height: 100px;
-                margin-top: -67px;
-                margin-left: -73px;
+                margin-top: -120px;
+                margin-left: -50px;
                 mix-blend-mode: difference;
             }
             #followBlock1.hovered1 {
@@ -56,8 +56,9 @@
         <header class="header" id="mainHeader">
             <nav>
                 <ul>
-                    <li><a href="Портфолио">Портфолио</a></li>
-                    <li><a href="Контакты" style="margin-left: 20px;">Контакты</a></li>
+                    <li><a href="index.html" style="margin-left: 0;">Главная</a></li>
+                    <li><a href="Portfolio.html">Портфолио</a></li>
+                    <li><a href="Контакты">Контакты</a></li>
                 </ul>
             </nav>
         </header>
@@ -69,7 +70,7 @@
                 <p class="helloSubtitle">торт - это ложь</p>
                 <span class="line"></span>
             </div>
-            <div><a href="" class="buttonHel">Смотреть портфолио</a></div>
+            <div><a href="Portfolio.html" class="buttonHel">Смотреть портфолио</a></div>
             <div class="btnCont">
                 <a href="#About" class="btnDown" style="color: #212121;">↓</a>
                 <a href="#About" class="btnDownText">Дальше</a>
@@ -80,13 +81,18 @@
             <!--div class="btnContUp">
                 <a href="#About" class="btnDown" style="color: #212121;">↓</a>
             </div-->
-            <div class="aboutTxt" id="aboutTxt">
-                <h1 style="font-size: 40px; font-family: Comfortaa, bold;">Обо мне</h1>
-                <span class="line1"></span>
-                <p>Зовут меня Тимур.
-                <br>Живу в России.
-                <br>Занимаюсь Front-End разработкой.
-                <br>Также увлекаюсь фотографией, дизайном и играми.</p>
+            <div>
+                <div id="aboutTxt">
+                    <a href="about.html" class="aboutTxt">
+                        <h1 style="font-size: 40px; font-family: Comfortaa, bold;">Обо мне</h1>
+                        <span class="line1"></span>
+                        <!--<div id="textContainer"></div>-->
+                        <p>Зовут меня Тимур.
+                        <br>Живу в России.
+                        <br>Занимаюсь Front-End разработкой.
+                        <br>Также увлекаюсь фотографией, дизайном и играми.</p>
+                    </a>
+                </div>
             </div>
             <div class="carouselCont">
                 <div class="carouselTrack">

@@ -4,7 +4,8 @@ html {
 }
 body {
     background-color: #1a1a1a;
-    padding: 5px 15px;
+    padding: 0;
+    margin: 0;
 
 }
 /*.header.visible {
@@ -14,11 +15,17 @@ body {
 }*/
 .header {
     display: flex;
+    position: fixed;
     width: 100%;
-    background-color: #212121;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 2px 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: #1a1a1a;
     justify-content: space-between;
-    border-radius: 15px;
     font-family: "Comfortaa", regular;
+    z-index: 9998;
 }
 .header ul {
     list-style: none;
@@ -29,6 +36,7 @@ body {
     text-decoration: none;
     color: #f5f5f5;
     display: inline-block;
+    margin-left: 20px;
     font-size: 15px;
     transition: .5s;
 }
@@ -38,19 +46,20 @@ body {
 }
 
 /*Блок с приветствием*/
-
+section {
+    margin: 10px 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 35px;
+}
 .hello {
     position: relative;
-    text-align: center;
-    margin-top: 10px;
     height: 88vh;
-    width: 100%;
+    margin-top: 70px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-image: url(https://i.pinimg.com/originals/40/ec/f5/40ecf5767feaa7f574adc2bcd0f2b5aa.jpg);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 35px;
     font-family: 'Comfortaa', regular;
 }
 .hello a {

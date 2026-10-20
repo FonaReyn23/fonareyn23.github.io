@@ -10,16 +10,24 @@
         <link rel="icon" href="img/logo.png" type="image/png">
         <script src="assets/scripts.js" defer></script>
         <style>
+            ::-webkit-scrollbar {
+                width: 7px;
+            }
+            ::-webkit-scrollbar-thumb {
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                min-height: 100px;
+            }
             #followBlock {
                 width: 15px;
                 height: 15px;
                 position: fixed;
+                left: 0;
+                top: 0;
                 z-index: 9999;
                 border-radius: 50%;
                 background-color: #f5f5f5;
                 border: solid 2px #f5f5f5;
-                margin-top: -80px;
-                margin-left: -10px;
+                transition: translate(-50%, -50%);
                 pointer-events: none;
                 transition: 0.1s;
             }
@@ -27,11 +35,12 @@
                 width: 25px;
                 height: 25px;
                 position: fixed;
+                left: 0;
+                top: 0;
                 z-index: 9999;
                 border-radius: 50%;
                 border: solid 2px #f5f5f5;
-                margin-top: -85px;
-                margin-left: -15px;
+                transition: translate(-50%, -50%);
                 pointer-events: none;
                 transition: 0.15s;
             }
@@ -39,14 +48,23 @@
                 background-color: rgba(255, 255, 255, 1);
                 width: 100px;
                 height: 100px;
-                margin-top: -120px;
-                margin-left: -50px;
+                transition: translate(-50%, -50%);
+                mix-blend-mode: difference;
+            }
+            #followBlock.hovered11 {
+                width: 50px;
+                height: 50px;
                 mix-blend-mode: difference;
             }
             #followBlock1.hovered1 {
                 border: 0;
                 width: 0;
                 height: 0;
+            }
+            @media (max-width: 768px){
+                #followBlock, #followBlock1{
+                    display: none;
+                }
             }
         </style>
     </head>
@@ -56,9 +74,9 @@
         <header class="header" id="mainHeader">
             <nav>
                 <ul>
-                    <li><a href="index.html" style="margin-left: 0;">Главная</a></li>
-                    <li><a href="Portfolio.html">Портфолио</a></li>
-                    <li><a href="Контакты">Контакты</a></li>
+                    <li><a href="index.html" class="btnInv" style="margin-left: 0;">Главная</a></li>
+                    <li><a href="Portfolio.html" class="btnInv">Портфолио</a></li>
+                    <li><a href="#contacts" class="btnInv">Контакты</a></li>
                 </ul>
             </nav>
         </header>
@@ -70,10 +88,10 @@
                 <p class="helloSubtitle">торт - это ложь</p>
                 <span class="line"></span>
             </div>
-            <div><a href="Portfolio.html" class="buttonHel">Смотреть портфолио</a></div>
+            <div><a href="Portfolio.html" class="buttonHel btnInv">Смотреть портфолио</a></div>
             <div class="btnCont">
-                <a href="#About" class="btnDown" style="color: #212121;">↓</a>
-                <a href="#About" class="btnDownText">Дальше</a>
+                <a href="#About" class="btnDown btnInv" style="color: #212121;">↓</a>
+                <a href="#About" class="btnDownText btnInv">Дальше</a>
             </div>
         </section>
         <!--2 блок-->
@@ -84,7 +102,7 @@
             <div>
                 <div id="aboutTxt">
                     <a href="about.html" class="aboutTxt">
-                        <h1 style="font-size: 40px; font-family: Comfortaa, bold;">Обо мне</h1>
+                        <h1 style="font-size: 40px; font-family: Comfortaa, bold;"><strong>Обо мне</strong></h1>
                         <span class="line1"></span>
                         <!--<div id="textContainer"></div>-->
                         <p>Зовут меня Тимур.
@@ -148,17 +166,17 @@
             <div></div>
         </section>-->
         <!--Конец-->
-        <section class="footer">
+        <section class="footer" id="contacts">
             <div>
                 <h1 style="font-size: 50px; margin-top: 30vh; margin-bottom: 0;">~ Подвал ~</h1>
                 <p>Пока что здесь нет ничего интересного</p>
                 <nav>
                     <ul style="padding: 0;">
-                        <li><a href="https://github.com/FonaReyn23"><img src="img/icons/github_macos_bigsur_icon_190140.png" width="58px" height="58px"></a></li>
-                        <li><a href="https://t.me/Alkina341"><img src="img/icons/telegram_macos_bigsur_icon_189662.png" width="58px" height="58px"></a></li>
-                        <li><a href="https://discord.gg/Rj8Ya4Axb"><img src="img/icons/discord_macos_bigsur_icon_190238.png" width="58px" height="58px"></a></li>
-                        <li><a href="https://steamcommunity.com/profiles/76561199162294815/"><img src="img/icons/steam_alt_macos_bigsur_icon_189698.png" width="58px" height="58px"></a></li>
-                        <li><a href="https://www.instagramm.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=styukyq"><img src="img/icons/3721672-instagram_108066.png" width="58px" height="58px"></a></li>
+                        <li><a href="https://github.com/FonaReyn23"><img src="img/icons/github_macos_bigsur_icon_190140.png" width="58px" height="58px" class="btnInv"></a></li>
+                        <li><a href="https://t.me/Alkina341"><img src="img/icons/telegram_macos_bigsur_icon_189662.png" width="58px" height="58px" class="btnInv"></a></li>
+                        <li><a href="https://discord.gg/Rj8Ya4Axb"><img src="img/icons/discord_macos_bigsur_icon_190238.png" width="58px" height="58px" class="btnInv"></a></li>
+                        <li><a href="https://steamcommunity.com/profiles/76561199162294815/"><img src="img/icons/steam_alt_macos_bigsur_icon_189698.png" width="58px" height="58px" class="btnInv"></a></li>
+                        <li><a href="https://www.instagramm.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=styukyq"><img src="img/icons/3721672-instagram_108066.png" width="58px" height="58px" class="btnInv"></a></li>
                     </ul>
                 </nav>
             </div>

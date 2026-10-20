@@ -6,9 +6,10 @@
         <!--<script src="assets/scripts.js" defer></script>-->
         <style>
             #followBlock {
-                position: absolute;
-                left: -11px;
-                top: -11px;
+                position: fixed;
+                left: 0;
+                top: 0;
+                transition: translate(50%, 50%);
                 width: 15px;
                 height: 15px;
                 z-index: 9999;
@@ -19,9 +20,10 @@
                 transition: 0.1s;
             }
             #followBlock1 {
-                position: absolute;
-                left: -16px;
-                top: -16px;
+                position: fixed;
+                left: 0;
+                top: 0;
+                transition: translate(-50%, -50%);
                 width: 25px;
                 height: 25px;
                 z-index: 9999;
@@ -31,9 +33,10 @@
                 transition: 0.15s;
             }
             #followBlock.hovered {
-                position: absolute;
-                left: -37px;
-                top: -37px;
+                position: fixed;
+                left: 0;
+                top: 0;
+                transition: translate(-50%, -50%);
                 width: 70px;
                 height: 70px;
                 background-color: rgba(255, 255, 255, 1);
@@ -43,6 +46,16 @@
                 border: 0;
                 width: 0;
                 height: 0;
+            }
+            #followBlock.hovered11 {
+                width: 50px;
+                height: 50px;
+                mix-blend-mode: difference;
+            }
+            @media (max-width: 768px){
+                #followBlock, #followBlock1{
+                    display: none;
+                }
             }
         </style>
     </head>

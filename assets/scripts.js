@@ -22,6 +22,19 @@ aboutTxtBlock.addEventListener("mouseleave", function(){
     follower1.classList.remove("hovered1");
 });
 
+
+var btnInvers = document.querySelectorAll('.btnInv');
+
+btnInvers.forEach(function(item){
+    item.addEventListener("mouseenter", function(){
+        follower.classList.add("hovered11");
+        follower1.classList.add("hovered1");
+    });
+    item.addEventListener("mouseleave", function(){
+        follower.classList.remove("hovered11");
+        follower1.classList.remove("hovered1");
+    });
+});
 // textContainer текст плавно появляется
 
 /*const textType = "Зовут меня Тимур. <br>Живу в России. <br>Занимаюсь Front-End разработкой. <br>Также увлекаюсь фотографией, дизайном и играми.";

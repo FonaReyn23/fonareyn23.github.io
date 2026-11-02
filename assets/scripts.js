@@ -23,8 +23,10 @@ aboutTxtBlock.addEventListener("mouseleave", function(){
 });
 
 var btnInvers = document.querySelectorAll('.btnInv');
+var carouselTrack = document.querySelectorAll('.carouselContainer');
 
-btnInvers.forEach(function(item){
+function easyJob(valueVariable) {
+    valueVariable.forEach(function(item){
     item.addEventListener("mouseenter", function(){
         follower.classList.add("hovered11");
         follower1.classList.add("hovered1");
@@ -33,7 +35,11 @@ btnInvers.forEach(function(item){
         follower.classList.remove("hovered11");
         follower1.classList.remove("hovered1");
     });
-});
+})
+}
+
+easyJob(btnInvers);
+easyJob(carouselTrack);
 
 // textContainer текст плавно появляется
 

@@ -178,40 +178,39 @@
             });
 
             var card = document.getElementById("cardId");
-            card.addEventListener("mouseenter", function(){
-                follower.classList.add("hovered");
-                follower1.classList.add("hovered1");
-            });
-            card.addEventListener("mouseleave", function(){
-                follower.classList.remove("hovered");
-                follower1.classList.remove("hovered1");
-            });
-
             var card1 = document.getElementById("cardId1")
-            card1.addEventListener("mouseenter", function(){
-                follower.classList.add("hovered");
-                follower1.classList.add("hovered1");
-                follower.style.borderRadius = "15px"
-            });
-            card1.addEventListener("mouseleave", function(){
-                follower.classList.remove("hovered");
-                follower1.classList.remove("hovered1");
-                follower.style.borderRadius = "50%"
-            });
-
             var card2 = document.getElementById("cardId2")
-            card2.addEventListener("mouseenter", function(){
-                follower.classList.add("hovered");
-                follower1.classList.add("hovered1");
+
+            cardStyle(card)
+
+            card1.addEventListener("mouseenter", function(){
                 follower.style.borderRadius = "15px"
                 currentRotation = 45
             });
-            card2.addEventListener("mouseleave", function(){
-                follower.classList.remove("hovered");
-                follower1.classList.remove("hovered1");
+            card1.addEventListener("mouseleave", function(){
                 follower.style.borderRadius = "50%"
-                currentRotation = 0
+                currentRotation = 90
             });
+            cardStyle(card1);
+
+            card2.addEventListener("mouseenter", function(){
+                follower.style.borderRadius = "15px"
+            });
+            card2.addEventListener("mouseleave", function(){
+                follower.style.borderRadius = "50%"
+            });
+            cardStyle(card2);
+
+            function cardStyle(cardName){
+                cardName.addEventListener("mouseenter", function(){
+                    follower.classList.add("hovered");
+                    follower1.classList.add("hovered1");
+                });
+                cardName.addEventListener("mouseleave", function(){
+                    follower.classList.remove("hovered");
+                    follower1.classList.remove("hovered1");
+                });
+            }
 
             //typedText
             const text = "Мои навыки и хобби";
